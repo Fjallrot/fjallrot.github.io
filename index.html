@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fjallrót - Privacy-Focused Mobile Apps from the Faroe Islands</title>
+  <meta name="description"
+    content="Fjallrót builds offline-first, native Android & AI applications for the Faroe Islands, prioritizing user safety and privacy.">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Ambient Glows -->
+  <div class="ambient-glows">
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="nav-container">
+      <div class="logo-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="42" stroke-width="2" />
+          <!-- Mountain Outline -->
+          <path d="M 28 60 L 50 32 L 72 60" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M 20 60 L 32 46 L 40 56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M 60 56 L 68 46 L 80 60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- Root System growing down from the base -->
+          <path d="M 50 60 Q 50 72 50 82" stroke-width="2.5" stroke-linecap="round" />
+          <path d="M 50 64 Q 42 70 34 76" stroke-width="2" stroke-linecap="round" />
+          <path d="M 50 64 Q 58 70 66 76" stroke-width="2" stroke-linecap="round" />
+          <path d="M 34 76 Q 30 80 26 84" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M 34 76 Q 37 81 40 85" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M 66 76 Q 63 81 60 85" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M 66 76 Q 70 80 74 84" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M 50 72 Q 47 77 44 80" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M 50 72 Q 53 77 56 80" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        <span>Fjallrót</span>
+      </div>
+
+      <nav id="nav-menu">
+        <a href="#about" data-en="About" data-fo="Um okkum">About</a>
+        <a href="#philosophy" data-en="Philosophy" data-fo="Hugsjón">Philosophy</a>
+        <a href="#apps" data-en="My Apps" data-fo="Mínar smáforrit">My Apps</a>
+        <a href="#contact" data-en="Contact" data-fo="Samband">Contact</a>
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fo">FO</button>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <svg class="hero-logo-big" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="42" stroke="white" stroke-width="2" />
+        <path d="M 28 60 L 50 32 L 72 60" stroke="white" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M 20 60 L 32 46 L 40 56" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M 60 56 L 68 46 L 80 60" stroke="white" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M 50 60 Q 50 72 50 82" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M 50 64 Q 42 70 34 76" stroke="white" stroke-width="2" stroke-linecap="round" />
+        <path d="M 50 64 Q 58 70 66 76" stroke="white" stroke-width="2" stroke-linecap="round" />
+        <path d="M 34 76 Q 30 80 26 84" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M 34 76 Q 37 81 40 85" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M 66 76 Q 63 81 60 85" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M 66 76 Q 70 80 74 84" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M 50 72 Q 47 77 44 80" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M 50 72 Q 53 77 56 80" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+      <div class="hero-tag" data-en="Mobile App Developer" data-fo="Smáforritamenjari">Mobile App Developer</div>
+      <h1 data-en="Building apps for the Faroe Islands" data-fo="Smíðar smáforrit til Føroyar">Building apps for the
+        Faroe Islands</h1>
+      <p class="hero-desc"
+        data-en="Creating clean, efficient Android applications that respect your privacy, work seamlessly offline, and solve local problems."
+        data-fo="Vit gera rein, skjót Android smáforrit sum virða títt privatlív, rigga uttan internet og loysa veruligar trupulleikar.">
+        Creating clean, efficient Android applications that respect your privacy, work seamlessly offline, and solve
+        local problems.</p>
+      <div class="btn-group">
+        <a href="#apps" class="btn btn-primary" data-en="View My Apps" data-fo="Sí míni forrit">View My Apps</a>
+        <a href="#contact" class="btn btn-secondary" data-en="Get in touch" data-fo="Set teg í samband">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy & Safety -->
+  <section id="philosophy">
+    <div class="section-container">
+      <div class="section-hdr">
+        <h2 data-en="Rooted in Trust & Safety" data-fo="Rætur í trygd og áliti">Rooted in Trust & Safety</h2>
+        <p data-en="Safety isn't just a feature, it's our foundation. Inspired by the mountain root (Fjallrót), our apps stand firm in protecting your rights."
+          data-fo="Trygd er ikki bara ein eginleiki, tað er grundvøllurin. Innblást av fjallarótini standa okkara forrit føst í at verja tíni rættindi.">
+          Safety isn't just a feature, it's our foundation. Inspired by the mountain root (Fjallrót), our apps stand
+          firm in protecting your rights.</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="phil-card">
+          <div class="phil-icon">
+            <!-- Shield lock icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+          <h3 data-en="Privacy & Security" data-fo="Privatlív & Trygd">Privacy & Security</h3>
+          <p data-en="No telemetry, no tracking, and no unnecessary permissions. Your personal details and search history never leave your device."
+            data-fo="Ongin sporing, ongar lýsingar, og ongar óneyðugar loyvir. Tíni persónligu dáta fara ongantið av tíni eind.">
+          </p>
+        </div>
+
+        <div class="phil-card">
+          <div class="phil-icon">
+            <!-- Offline cloud off icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5l14 14" />
+              <path d="M17 17H5a5 5 0 0 1-1.78-9.68" />
+            </svg>
+          </div>
+          <h3 data-en="Offline Capability" data-fo="Fult virki uttan net">Offline Capability</h3>
+          <p data-en="Designed for the Faroese terrain. All law texts, recipe databases, and core functionalities work completely offline."
+            data-fo="Gjørt til føroyska landslagið. Allir lógartiklar, uppskriftir og kjarnuvirksemi rigga heilt uttan internet.">
+          </p>
+        </div>
+
+        <div class="phil-card">
+          <div class="phil-icon">
+            <!-- Community heart icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </div>
+          <h3 data-en="Faroese Community" data-fo="Føroysk Mentan">Faroese Community</h3>
+          <p data-en="Creating digital resources that preserve Faroese heritage and guide local citizens. Native translation and local relevance."
+            data-fo="Vit skapa talgildar rættindi sum varðveita føroyskan arva og leiðbeina borgarum. Føroysk týðing og staðbundið virði.">
+          </p>
+        </div>
+
+        <div class="phil-card">
+          <div class="phil-icon">
+            <!-- Code clean icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3 data-en="Clean Architecture" data-fo="Reinur Arkitektur">Clean Architecture</h3>
+          <p data-en="Built natively using modern Android patterns, Kotlin, and local databases. No battery drain, bloatware, or lag."
+            data-fo="Smíðað sum nativt forrit við Kotlin og staðbundnum dátugrunnum. Ongin óneyðug battarínýtsla ella seinking.">
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Apps Section (Split layout with interactive phone mockup) -->
+  <section id="apps">
+    <div class="section-container">
+      <div class="section-hdr">
+        <h2 data-en="Currently Shipping" data-fo="Mínar Smáforrit">Currently Shipping</h2>
+        <p data-en="Tap on any app to view its features and explore the live interactive mockup."
+          data-fo="Trýst á eitt forrit fyri at lesa meira og royna tað á telefonini.">Tap on any app to view its
+          features and explore the live interactive mockup.</p>
+      </div>
+
+      <div class="apps-split">
+        <!-- List of Apps -->
+        <div class="apps-list">
+          <!-- App 1: Rættarvísi -->
+          <div class="app-card active" data-app="raettarvisi">
+            <div class="app-card-hdr">
+              <div class="app-icon">
+                <!-- Scale of justice vector -->
+                <svg viewBox="0 0 100 100" fill="none" stroke="#00f2fe" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 50 15 L 50 85" stroke-width="4" stroke-linecap="round" />
+                  <path d="M 25 30 L 75 30" stroke-width="4" stroke-linecap="round" />
+                  <path d="M 25 30 L 15 55 L 35 55 Z" stroke-width="3" fill="rgba(0,242,254,0.1)"
+                    stroke-linejoin="round" />
+                  <path d="M 75 30 L 65 55 L 85 55 Z" stroke-width="3" fill="rgba(0,242,254,0.1)"
+                    stroke-linejoin="round" />
+                  <path d="M 35 85 L 65 85" stroke-width="6" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="app-meta">
+                <h3>Rættarvísi</h3>
+                <span class="app-tag" data-en="Legal Guide" data-fo="Lógarkennari">Legal Guide</span>
+              </div>
+            </div>
+            <p data-en="A comprehensive law guide for citizens in the Faroe Islands. Navigate statutes, civil rights, and legal definitions offline. Purely informative, entirely private."
+              data-fo="Ein løtt og greið lógveiting til føroyskar borgarar. Les greinar, borgararættindi og lógarorð uttan net. Tíðindagott og heilt privat.">
+              A comprehensive law guide for citizens in the Faroe Islands. Navigate statutes, civil rights, and legal
+              definitions offline. Purely informative, entirely private.</p>
+
+            <div class="app-features">
+              <div class="app-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span data-en="Complete Faroese law codes stored offline"
+                  data-fo="Føroyska lógarsavnið lagt á eindina">Complete Faroese law codes stored offline</span>
+              </div>
+              <div class="app-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span data-en="Fast, privacy-safe keyword search" data-fo="Snarligt og privat leititól">Fast,
+                  privacy-safe keyword search</span>
+              </div>
+              <div class="app-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span data-en="Plain language guidelines on common rights"
+                  data-fo="Løtt greiðsla av vanligum rættindum">Plain language guidelines on common rights</span>
+              </div>
+            </div>
+
+            <a href="#" class="play-badge"
+              onclick="event.preventDefault(); alert('Redirecting to Google Play (Mock)...')">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3 5.27v13.46c0 .82.68 1.43 1.47 1.25l13.14-6.73c.72-.37.72-1.4 0-1.77L4.47 4.02C3.68 3.84 3 4.45 3 5.27z" />
+              </svg>
+              <div class="play-badge-text">
+                <span data-en="Get it on" data-fo="Tak niður á">Get it on</span>
+                <span>Google Play</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- App 2: Recipe App -->
+          <div class="app-card" data-app="recipe">
+            <div class="app-card-hdr">
+              <div class="app-icon">
+                <!-- Cooking pot icon -->
+                <svg viewBox="0 0 100 100" fill="none" stroke="#00f2fe" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 20 40 L 80 40 L 75 75 C 75 80 70 85 60 85 L 40 85 C 30 85 25 80 25 75 Z" stroke-width="4"
+                    fill="rgba(0,242,254,0.1)" stroke-linejoin="round" />
+                  <path d="M 15 40 L 85 40" stroke-width="5" stroke-linecap="round" />
+                  <path d="M 50 15 L 50 30" stroke-width="4" stroke-linecap="round" />
+                  <path d="M 40 22 C 40 22 45 25 50 22 C 55 19 60 22 60 22" stroke-width="2.5" stroke-linecap="round" />
+                  <path d="M 15 48 C 10 48 10 58 15 58" stroke-width="3" stroke-linecap="round" />
+                  <path d="M 85 48 C 90 48 90 58 85 58" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="app-meta">
+                <h3 data-en="Recipe App" data-fo="Matuppskriftir">Recipe App</h3>
+                <span class="app-tag" data-en="Culinary Heritage" data-fo="Matararvur">Culinary Heritage</span>
+              </div>
+            </div>
+            <p data-en="Preserving Faroese food traditions. Access authentic, step-by-step recipes for skerpikjøt, ræstur fiskur, and homebaked rhubarb pies. Features portion adjustment toggles and works completely offline."
+              data-fo="Varðveit føroyska matmentan. Finnið uppskriftir til skerpikjøt, ræstan fisk, og rabarbugreyt. Forritið riggar heilt uttan netsamband og hevur skamtarstillingar.">
+              Preserving Faroese food traditions. Access authentic, step-by-step recipes for skerpikjøt, ræstur fiskur,
+              and homebaked rhubarb pies. Features portion adjustment toggles and works completely offline.</p>
+
+            <div class="app-features">
+              <div class="app-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span data-en="Traditional Faroese methods & drying guides"
+                  data-fo="Føroyskir matgerðarhættir og hjallaleiðbeiningar">Traditional Faroese methods & drying
+                  guides</span>
+              </div>
+              <div class="app-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span data-en="Scaling calculator for different dinner servings"
+                  data-fo="Skamtarroknari eftir gestatali">Scaling calculator for different dinner servings</span>
+              </div>
+              <div class="app-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span data-en="Offline database for cooking in remote cottages"
+                  data-fo="Dátugrunnur riggar í hjallinum og summarhúsinum">Offline database for cooking in remote
+                  cottages</span>
+              </div>
+            </div>
+
+            <a href="#" class="play-badge"
+              onclick="event.preventDefault(); alert('Redirecting to Google Play (Mock)...')">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3 5.27v13.46c0 .82.68 1.43 1.47 1.25l13.14-6.73c.72-.37.72-1.4 0-1.77L4.47 4.02C3.68 3.84 3 4.45 3 5.27z" />
+              </svg>
+              <div class="play-badge-text">
+                <span data-en="Get it on" data-fo="Tak niður á">Get it on</span>
+                <span>Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone Simulator Column -->
+        <div class="simulator-sticky">
+          <div class="phone-mockup">
+            <div class="phone-notch">
+              <div class="camera-dot"></div>
+            </div>
+            <div class="phone-inner">
+
+              <!-- Rættarvísi Simulated Screen -->
+              <div class="screen-content active" id="screen-raettarvisi">
+                <div class="law-header">
+                  <!-- scale outline -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="9" x2="19" y2="9" />
+                    <path d="M5 9 Q1 13 5 17 Q9 13 5 9" />
+                    <path d="M19 9 Q15 13 19 17 Q23 13 19 9" />
+                  </svg>
+                  <h4>Rættarvísi</h4>
+                </div>
+                <div class="law-search">
+                  <input type="text" class="search-bar" placeholder="Search laws..."
+                    data-en-placeholder="Search laws..." data-fo-placeholder="Leita í lógum...">
+                </div>
+                <div class="law-scroll">
+                  <div class="law-card" onclick="openLawDetail('almannalogin')">
+                    <h5>Almannalógin <span data-en="Social" data-fo="Almanna">Social</span></h5>
+                    <p data-en="Act on social services and benefits for citizens in the Faroe Islands."
+                      data-fo="Lóg um almannatænastur og veitingar til føroyskar borgarar.">Act on social services and
+                      benefits for citizens in the Faroe Islands.</p>
+                  </div>
+                  <div class="law-card" onclick="openLawDetail('styriskipislogin')">
+                    <h5>Stýrisskipanarlógin <span data-en="Constitution" data-fo="Stjórn">Constitution</span></h5>
+                    <p data-en="The constitutional framework and basic rights of the Faroese home rule."
+                      data-fo="Kjarnarættindi og heimildir hjá Føroya landsstýri.">The constitutional framework and
+                      basic rights of the Faroese home rule.</p>
+                  </div>
+                  <div class="law-card" onclick="openLawDetail('barnalogin')">
+                    <h5>Barnalógin <span data-en="Family" data-fo="Familja">Family</span></h5>
+                    <p data-en="Legal rights, custody, and child welfare statutes in Faroese law."
+                      data-fo="Barnsins rættindi, foreldramyndugleiki og barnavernd.">Legal rights, custody, and child
+                      welfare statutes in Faroese law.</p>
+                  </div>
+                </div>
+
+                <!-- Law Detail Modal inside simulator -->
+                <div class="law-detail-view" id="law-detail-view">
+                  <div class="back-btn" onclick="closeLawDetail()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="19" y1="12" x2="5" y2="12" />
+                      <polyline points="12 19 5 12 12 5" />
+                    </svg>
+                    <span data-en="Back" data-fo="Aftur">Back</span>
+                  </div>
+                  <h5 id="law-detail-title">Law Title</h5>
+                  <p id="law-detail-text"
+                    style="font-size:0.75rem; color:#d1d5db; line-height: 1.4; overflow-y:auto; flex:1;">Law text...</p>
+                </div>
+              </div>
+
+              <!-- Recipe Simulated Screen -->
+              <div class="screen-content" id="screen-recipe">
+                <div class="recipe-header">
+                  <!-- Pot outline -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9h18v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9z" />
+                    <path d="M12 2v7" />
+                    <path d="M9 5h6" />
+                  </svg>
+                  <h4 data-en="Føroyskur Matur" data-fo="Føroyskur Matur">Føroyskur Matur</h4>
+                </div>
+                <div class="recipe-categories">
+                  <span class="recipe-tab active" onclick="filterRecipes('all')" data-en="All" data-fo="Alt">All</span>
+                  <span class="recipe-tab" onclick="filterRecipes('meat')" data-en="Meat" data-fo="Kjøt">Meat</span>
+                  <span class="recipe-tab" onclick="filterRecipes('fish')" data-en="Fish" data-fo="Fiskur">Fish</span>
+                </div>
+                <div class="recipe-scroll" id="recipe-list">
+                  <div class="recipe-card" data-category="meat" onclick="openRecipeDetail('skerpikjot')">
+                    <div class="recipe-img-placeholder">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                      </svg>
+                    </div>
+                    <div class="recipe-info">
+                      <h5>Skerpikjøt</h5>
+                      <span data-en="Wind-dried mutton" data-fo="Ræst og turt kjøt">Wind-dried mutton</span>
+                    </div>
+                  </div>
+                  <div class="recipe-card" data-category="fish" onclick="openRecipeDetail('raestur-fiskur')">
+                    <div class="recipe-img-placeholder">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M23 12c-2.4 4-6.4 6-11 6S3.6 16 1.2 12c2.4-4 6.4-6 11-6s8.6 2 11 6z" />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    </div>
+                    <div class="recipe-info">
+                      <h5>Ræstur Fiskur</h5>
+                      <span data-en="Fermented fish" data-fo="Hangaður fiskur">Fermented fish</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Recipe Detail Modal inside simulator -->
+                <div class="recipe-detail-view" id="recipe-detail-view">
+                  <div class="back-btn" onclick="closeRecipeDetail()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="19" y1="12" x2="5" y2="12" />
+                      <polyline points="12 19 5 12 12 5" />
+                    </svg>
+                    <span data-en="Back" data-fo="Aftur">Back</span>
+                  </div>
+                  <h5 class="recipe-detail-title" id="recipe-detail-title">Recipe Name</h5>
+                  <div class="recipe-detail-meta" id="recipe-detail-meta">Ready in 2 hours</div>
+
+                  <div class="recipe-section-title" data-en="Ingredients" data-fo="Tilfar">Ingredients</div>
+                  <ul class="recipe-ingredients-list" id="recipe-detail-ingredients">
+                    <li>Ingredient item</li>
+                  </ul>
+
+                  <div class="recipe-section-title" data-en="Instructions" data-fo="Gjørt soleiðis">Instructions</div>
+                  <p class="recipe-instructions" id="recipe-detail-instructions">Directions details...</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-container">
+      <div class="about-split">
+        <div class="about-text">
+          <h2 data-en="Independent Developer" data-fo="Sjálfstøðugur Menjari">Independent Developer</h2>
+          <h3 data-en="Based in Tórshavn, building for the world." data-fo="Búsettur í Havn, mennir til heimin.">Based
+            in Tórshavn, building for the world.</h3>
+          <p data-en="Hi! I am a Faroese software developer specializing in native Android and local AI models. I believe in software that serves a practical purpose, runs efficiently, and respects the digital autonomy of users."
+            data-fo="Hey! Eg eri ein føroyskur ritbúnaðarmenjari, sum hevur sergrein innan Android-menning og lokalar AI-skipanir. Eg trúgvi upp á forrit sum loysa ítøkiligir uppgávur uttan óneyðugar sporingar ella seinkingar.">
+            Hi! I am a Faroese software developer specializing in native Android and local AI models. I believe in
+            software that serves a practical purpose, runs efficiently, and respects the digital autonomy of users.</p>
+          <p data-en="Whether preserving traditional culinary heritage or mapping local statutes, each application is built with a focus on simplicity, responsiveness, and absolute privacy. No tracking. No bloatware."
+            data-fo="Hvort tað er at varðveita føroyskan matararv ella savna landsins lógir, so er hvørt forrit gjørt við atliti til einfaldleika, snarleika og fult privatlív. Ongin sporing. Ongin fyllufólk.">
+            Whether preserving traditional culinary heritage or mapping local statutes, each application is built with a
+            focus on simplicity, responsiveness, and absolute privacy. No tracking. No bloatware.</p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+              <line x1="7" y1="2" x2="7" y2="22" />
+              <line x1="17" y1="2" x2="17" y2="22" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+            </svg>
+            <h4 data-en="Kotlin & Jetpack" data-fo="Kotlin & Jetpack">Kotlin & Jetpack</h4>
+            <p data-en="Native performance, reactive layouts, and modern architecture templates."
+              data-fo="Nativur fartur, reaktivt snið og nýmótins arkitekturur.">Native performance, reactive layouts,
+              and modern architecture templates.</p>
+          </div>
+
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3" />
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
+            </svg>
+            <h4 data-en="Offline SQLite" data-fo="SQLite uttan net">Offline SQLite</h4>
+            <p data-en="Local SQLite and Room databases for high speed offline searching."
+              data-fo="SQLite og Room dátugrunnar fyri skjóta leitining uttan net.">Local SQLite and Room databases for
+              high speed offline searching.</p>
+          </div>
+
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+            <h4 data-en="On-Device AI" data-fo="AI á eindini">On-Device AI</h4>
+            <p data-en="TensorFlow Lite models running on local hardware to respect private inputs."
+              data-fo="Lokalir AI-samleikar koyra á telefonini so títt dáta verður hjá tær.">TensorFlow Lite models
+              running on local hardware to respect private inputs.</p>
+          </div>
+
+          <div class="tech-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
+            </svg>
+            <h4 data-en="Material 3" data-fo="Material 3 snið">Material 3</h4>
+            <p data-en="Beautiful responsive, accessible layouts following current guidelines."
+              data-fo="Faldir og brúkaravinarligir skíggjar sambært nýggjastu stílleiði.">Beautiful responsive,
+              accessible layouts following current guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-container">
+      <div class="contact-container">
+        <div class="contact-card">
+          <div class="contact-info">
+            <h2 data-en="Let's Connect" data-fo="Set teg í samband">Let's Connect</h2>
+            <p data-en="Have a project in mind or interested in collaborating? Reach out or visit my social profiles."
+              data-fo="Hevur tú eina verkætlan í hyggju, ella vilt tú samstarva? Send eina frágreiðing ella vitja míni profilir.">
+              Have a project in mind or interested in collaborating? Reach out or visit my social profiles.</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>Fjallrot@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span data-en="Tórshavn, Faroe Islands" data-fo="Tórshavn, Føroyar">Sandur, Faroe Islands</span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="GitHub Profile"
+                onclick="event.preventDefault(); alert('Redirecting to GitHub (Mock)...')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn Profile"
+                onclick="event.preventDefault(); alert('Redirecting to LinkedIn (Mock)...')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Google Play Profile"
+                onclick="event.preventDefault(); alert('Redirecting to Play Store (Mock)...')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully (Mock)!')">
+            <div class="form-group">
+              <label for="name" data-en="Your Name" data-fo="Navn">Your Name</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" data-en="Email Address" data-fo="T-postur">Email Address</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message" data-en="Message" data-fo="Fráboðan">Message</label>
+              <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-en="Send Message" data-fo="Send fráboðan">Send
+              Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-container">
+      <p>&copy; 2026 Fjallrót. All rights reserved. Built offline, respecting privacy.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
