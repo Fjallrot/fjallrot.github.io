@@ -292,14 +292,12 @@ function closeRecipeDetail() {
 }
 
 // Filter Recipe Cards in Simulator
-function filterRecipes(category) {
+function filterRecipes(category, element) {
   const tabs = document.querySelectorAll('.recipe-categories .recipe-tab');
   tabs.forEach(t => t.classList.remove('active'));
   
-  // Find clicked tab
-  const eventTarget = window.event ? window.event.target : null;
-  if (eventTarget) {
-    eventTarget.classList.add('active');
+  if (element) {
+    element.classList.add('active');
   } else {
     // Fallback find by category
     tabs.forEach(t => {
