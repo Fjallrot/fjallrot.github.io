@@ -7,6 +7,7 @@
   <title>Fjallrót - Privacy-Focused Mobile Apps from the Faroe Islands</title>
   <meta name="description"
     content="Fjallrót is an independent software developer building offline-first, native Android & AI applications for the Faroe Islands. Prioritizing user safety and privacy. Not affiliated with any government entity.">
+    <meta name="google-site-verification" content="VikpMvJAJWa5NrAUqKk0GHbtqbcIDJvsQB8B-6yq3xs" />
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -43,7 +44,7 @@
         <span>Fjallrót</span>
       </div>
 
-      <nav>
+      <nav id="nav-menu">
         <a href="#about" data-en="About" data-fo="Um okkum">About</a>
         <a href="#philosophy" data-en="Philosophy" data-fo="Hugsjón">Philosophy</a>
         <a href="#apps" data-en="My Apps" data-fo="Mínar smáforrit">My Apps</a>
@@ -84,12 +85,12 @@
         <path d="M 50 72 Q 47 77 44 80" stroke="white" stroke-width="1.5" stroke-linecap="round" />
         <path d="M 50 72 Q 53 77 56 80" stroke="white" stroke-width="1.5" stroke-linecap="round" />
       </svg>
-      <div class="hero-tag" data-en="Independent Mobile App Developer" data-fo="Sjálfstøðugur smáforritamenjari">Independent Mobile App Developer</div>
+      <div class="hero-tag" data-en="Independent Mobile App Developer" data-fo="Sjálvstøðugur smáforritamenjari">Independent Mobile App Developer</div>
       <h1 data-en="Building apps for the Faroe Islands" data-fo="Smíðar smáforrit til Føroyar">Building apps for the
         Faroe Islands</h1>
       <p class="hero-desc"
         data-en="Creating clean, efficient Android applications that respect your privacy, work seamlessly offline, and solve local problems. Independent developer, not affiliated with any government entity."
-        data-fo="Vit gera rein, skjót Android smáforrit sum virða títt privatlív, rigga uttan internet og loysa veruligar trupulleikar. Sjálfstøðugur menjari, ikki knýttur at nøkrum stovni.">
+        data-fo="Vit gera rein, skjót Android smáforrit sum virða títt privatlív, rigga uttan internet og loysa veruligar trupulleikar. Sjálvstøðugur menjari, ikki knýttur at nøkrum stovni.">
         Creating clean, efficient Android applications that respect your privacy, work seamlessly offline, and solve
         local problems. Independent developer, not affiliated with any government entity.</p>
       <div class="btn-group">
@@ -386,9 +387,9 @@
                   <h4 data-en="Føroyskur Matur" data-fo="Føroyskur Matur">Føroyskur Matur</h4>
                 </div>
                 <div class="recipe-categories">
-                  <span class="recipe-tab active" onclick="filterRecipes('all')" data-en="All" data-fo="Alt">All</span>
-                  <span class="recipe-tab" onclick="filterRecipes('meat')" data-en="Meat" data-fo="Kjøt">Meat</span>
-                  <span class="recipe-tab" onclick="filterRecipes('fish')" data-en="Fish" data-fo="Fiskur">Fish</span>
+                  <span class="recipe-tab active" onclick="filterRecipes('all', this)" data-en="All" data-fo="Alt">All</span>
+                  <span class="recipe-tab" onclick="filterRecipes('meat', this)" data-en="Meat" data-fo="Kjøt">Meat</span>
+                  <span class="recipe-tab" onclick="filterRecipes('fish', this)" data-en="Fish" data-fo="Fiskur">Fish</span>
                 </div>
                 <div class="recipe-scroll" id="recipe-list">
                   <div class="recipe-card" data-category="meat" onclick="openRecipeDetail('skerpikjot')">
@@ -450,7 +451,7 @@
     <div class="section-container">
       <div class="about-split">
         <div class="about-text">
-          <h2 data-en="Independent Developer" data-fo="Sjálfstøðugur Menjari">Independent Developer</h2>
+          <h2 data-en="Independent Developer" data-fo="Sjálvstøðugur Menjari">Independent Developer</h2>
           <h3 data-en="Based in Faroe Islands, building for the world." data-fo="Búsettur í Føroyum, mennir til heimin.">Based
             in Faroe Islands, building for the world.</h3>
           <p data-en="Hi! I am a Faroese software developer specializing in native Android and local AI models. I believe in software that serves a practical purpose, runs efficiently, and respects the digital autonomy of users."
@@ -458,7 +459,7 @@
             Hi! I am a Faroese software developer specializing in native Android and local AI models. I believe in
             software that serves a practical purpose, runs efficiently, and respects the digital autonomy of users.</p>
           <p data-en="Whether preserving traditional culinary heritage or mapping local statutes, each application is built with a focus on simplicity, responsiveness, and absolute privacy. No tracking. No bloatware. Fjallrót is an independent developer and is not affiliated with, endorsed by, or connected to any government entity."
-            data-fo="Hvort tað er at varðveita føroyskan matararv ella savna landsins lógir, so er hvørt forrit gjørt við atliti til einfaldleika, snarleika og fult privatlív. Ongin sporing. Ongin fyllufólk. Fjallrót er ein sjálfstøðugur menjari og er ikki knýttur at, góðkendur av, ella sambandin við nøkrum stovni.">
+            data-fo="Hvort tað er at varðveita føroyskan matararv ella savna landsins lógir, so er hvørt forrit gjørt við atliti til einfaldleika, snarleika og fult privatlív. Ongin sporing. Ongin fyllufólk. Fjallrót er ein sjálvstøðugur menjari og er ikki knýttur at, góðkendur av, ella sambandin við nøkrum stovni.">
             Whether preserving traditional culinary heritage or mapping local statutes, each application is built with a
             focus on simplicity, responsiveness, and absolute privacy. No tracking. No bloatware. Fjallrót is an independent developer and is not affiliated with, endorsed by, or connected to any government entity.</p>
         </div>
@@ -604,7 +605,7 @@
       <p>&copy; 2026 Fjallrót. All rights reserved. Built offline, respecting privacy.</p>
       <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 0.5rem;">
         <span data-en="Disclaimer: Fjallrót is an independent software developer. This website and its applications are not affiliated with, endorsed by, or connected to any government entity. Legal content is for informational purposes only and should not be considered legal advice."
-              data-fo="Fráboðan: Fjallrót er ein sjálfstøðugur ritbúnaðarmenjari. Heimasíðan og forritini eru ikki knýtt at, góðkend av, ella sambandin við nøkrum stovni. Lógarinnihald er bert til kunningar og eigur ikki at verða sæð sum løgfrøðilig ráðgeving.">
+              data-fo="Fráboðan: Fjallrót er ein sjálvstøðugur ritbúnaðarmenjari. Heimasíðan og forritini eru ikki knýtt at, góðkend av, ella sambandin við nøkrum stovni. Lógarinnihald er bert til kunningar og eigur ikki at verða sæð sum løgfrøðilig ráðgeving.">
           Disclaimer: Fjallrót is an independent software developer. This website and its applications are not affiliated with, endorsed by, or connected to any government entity. Legal content is for informational purposes only and should not be considered legal advice.
         </span>
       </p>
@@ -615,5 +616,3 @@
 </body>
 
 </html>
-
-
