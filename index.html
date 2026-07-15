@@ -4,11 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fjallrót - Privacy-Focused Mobile Apps from the Faroe Islands</title>
+  <title>Fjallrót — Privacy-Focused Software from the Faroe Islands</title>
   <meta name="description"
-    content="Fjallrót is an independent software developer building offline-first, native Android & AI applications for the Faroe Islands. Prioritizing user safety and privacy. Not affiliated with any government entity.">
+    content="Fjallrót is an independent Faroese software developer building privacy-focused, offline-first Android and on-device AI applications.">
   <meta name="google-site-verification" content="AhpWqZw-EHjRRwMjivdDF2WdB519p-YWfKk_PlI8Jbs">
   <meta name="theme-color" content="#060913">
+  <link rel="canonical" href="https://fjallrot.com/">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fjallrót">
+  <meta property="og:title" content="Fjallrót — Privacy-Focused Software from the Faroe Islands">
+  <meta property="og:description" content="Independent, privacy-focused Android and on-device AI applications built in the Faroe Islands.">
+  <meta property="og:url" content="https://fjallrot.com/">
+  <meta property="og:image" content="https://fjallrot.com/logo4.png">
+  <meta property="og:image:alt" content="Fjallrót logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fjallrót — Privacy-Focused Software">
+  <meta name="twitter:description" content="Independent, privacy-focused software built in the Faroe Islands.">
+  <meta name="twitter:image" content="https://fjallrot.com/logo4.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fjallrót",
+    "url": "https://fjallrot.com/",
+    "logo": "https://fjallrot.com/logo4.png",
+    "email": "info@fjallrot.com",
+    "description": "Independent Faroese software developer building privacy-focused, offline-first Android and on-device AI applications."
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="logo4.png">
   <link rel="stylesheet" href="index.css">
 </head>
@@ -25,7 +52,7 @@
   <header id="header">
     <div class="nav-container">
       <a class="logo-wrapper" href="#hero" aria-label="Fjallrót home">
-        <img src="logo4.png" alt="Fjallrót Logo" class="logo-svg">
+        <img src="logo4.png" alt="Fjallrót Logo" class="logo-svg" decoding="async">
         <span>Fjallrót</span>
       </a>
 
@@ -52,15 +79,14 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-container">
-      <img src="logo4.png" alt="Fjallrót Logo" class="hero-logo-big">
-      <div class="hero-tag" data-en="Independent Mobile App Developer" data-fo="Sjálvstøðugur smáforritamenjari">Independent Mobile App Developer</div>
-      <h1 data-en="Building apps for the Faroe Islands" data-fo="Smíðar smáforrit til Føroyar">Building apps for the
-        Faroe Islands</h1>
+      <img src="logo4.png" alt="Fjallrót Logo" class="hero-logo-big" decoding="async" fetchpriority="high">
+      <div class="hero-tag" data-en="Independent Software Developer" data-fo="Sjálvstøðugur ritbúnaðarmenjari">Independent Software Developer</div>
+      <h1 data-en="Privacy-focused software built in the Faroe Islands" data-fo="Privatlívsverjandi ritbúnaður mentur í Føroyum">Privacy-focused software built in the Faroe Islands</h1>
       <p class="hero-desc"
-        data-en="Creating clean, efficient Android applications that respect your privacy, work seamlessly offline, and solve local problems. Independent developer, not affiliated with any government entity."
-        data-fo="Vit gera rein, skjót Android smáforrit sum virða títt privatlív, rigga uttan internet og loysa veruligar trupulleikar. Sjálvstøðugur menjari, ikki knýttur at nøkrum stovni.">
-        Creating clean, efficient Android applications that respect your privacy, work seamlessly offline, and solve
-        local problems. Independent developer, not affiliated with any government entity.</p>
+        data-en="Creating clean, efficient Android and on-device AI applications that respect your privacy, work seamlessly offline, and solve practical problems. Independent developer, not affiliated with any government entity."
+        data-fo="Vit menna rein og skjót Android- og AI-smáforrit, sum virða títt privatlív, rigga uttan internet og loysa ítøkiligar trupulleikar. Sjálvstøðugur menjari, ikki knýttur at nøkrum stovni.">
+        Creating clean, efficient Android and on-device AI applications that respect your privacy, work seamlessly offline,
+        and solve practical problems. Independent developer, not affiliated with any government entity.</p>
       <div class="btn-group">
         <a href="#apps" class="btn btn-primary" data-en="View My Apps" data-fo="Sí míni forrit">View My Apps</a>
         <a href="#contact" class="btn btn-secondary" data-en="Get in touch" data-fo="Set teg í samband">Get in touch</a>
@@ -147,10 +173,10 @@
   <section id="apps">
     <div class="section-container">
       <div class="section-hdr">
-        <h2 data-en="Currently Shipping" data-fo="Mínar Smáforrit">Currently Shipping</h2>
-        <p data-en="Tap on any app to view its features and explore the live interactive mockup."
-          data-fo="Trýst á eitt forrit fyri at lesa meira og royna tað á telefonini.">Tap on any app to view its
-          features and explore the live interactive mockup.</p>
+        <h2 data-en="Projects in Development" data-fo="Verkætlanir í menning">Projects in Development</h2>
+        <p data-en="Explore current projects, their planned features, and the interactive previews."
+          data-fo="Kanna verandi verkætlanir, ætlaðar eginleikar og interaktiv sýnishorn.">Explore current projects, their planned
+          features, and the interactive previews.</p>
       </div>
 
       <div class="apps-split">
@@ -205,17 +231,16 @@
               </div>
             </div>
 
-            <a href="#" class="play-badge"
-              onclick="event.preventDefault(); alert('Redirecting to Google Play (Mock)...')">
-              <svg viewBox="0 0 24 24" fill="currentColor">
+            <span class="play-badge" role="status" aria-label="Google Play release coming soon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M3 5.27v13.46c0 .82.68 1.43 1.47 1.25l13.14-6.73c.72-.37.72-1.4 0-1.77L4.47 4.02C3.68 3.84 3 4.45 3 5.27z" />
               </svg>
               <div class="play-badge-text">
-                <span data-en="Get it on" data-fo="Tak niður á">Get it on</span>
+                <span data-en="Coming soon on" data-fo="Kemur skjótt á">Coming soon on</span>
                 <span>Google Play</span>
               </div>
-            </a>
+            </span>
           </div>
 
           <!-- App 2: Recipe App -->
@@ -269,17 +294,16 @@
               </div>
             </div>
 
-            <a href="#" class="play-badge"
-              onclick="event.preventDefault(); alert('Redirecting to Google Play (Mock)...')">
-              <svg viewBox="0 0 24 24" fill="currentColor">
+            <span class="play-badge" role="status" aria-label="Google Play release coming soon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M3 5.27v13.46c0 .82.68 1.43 1.47 1.25l13.14-6.73c.72-.37.72-1.4 0-1.77L4.47 4.02C3.68 3.84 3 4.45 3 5.27z" />
               </svg>
               <div class="play-badge-text">
-                <span data-en="Get it on" data-fo="Tak niður á">Get it on</span>
+                <span data-en="Coming soon on" data-fo="Kemur skjótt á">Coming soon on</span>
                 <span>Google Play</span>
               </div>
-            </a>
+            </span>
           </div>
         </div>
 
@@ -520,47 +544,39 @@
             </div>
 
             <div class="social-links">
-              <a href="#" class="social-link" aria-label="GitHub Profile"
-                onclick="event.preventDefault(); alert('Redirecting to GitHub (Mock)...')">
+              <a href="https://github.com/Fjallrot" class="social-link" aria-label="Fjallrót on GitHub"
+                target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
+                  stroke-linejoin="round" aria-hidden="true">
                   <path
                     d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
               </a>
-              <a href="#" class="social-link" aria-label="LinkedIn Profile"
-                onclick="event.preventDefault(); alert('Redirecting to LinkedIn (Mock)...')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Google Play Profile"
-                onclick="event.preventDefault(); alert('Redirecting to Play Store (Mock)...')">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="5 3 19 12 5 21 5 3" />
+              <a href="mailto:info@fjallrot.com" class="social-link" aria-label="Email Fjallrót">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
                 </svg>
               </a>
             </div>
           </div>
 
-          <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully (Mock)!')">
+          <form class="contact-form" id="contact-form"
+            onsubmit="event.preventDefault(); const n=document.getElementById('name').value.trim(); const e=document.getElementById('email').value.trim(); const m=document.getElementById('message').value.trim(); const subject='Website enquiry from ' + n; const body='Name: ' + n + '\nEmail: ' + e + '\n\nMessage:\n' + m; window.location.href='mailto:info@fjallrot.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);">
             <div class="form-group">
               <label for="name" data-en="Your Name" data-fo="Navn">Your Name</label>
-              <input type="text" id="name" required>
+              <input type="text" id="name" name="name" autocomplete="name" required>
             </div>
             <div class="form-group">
               <label for="email" data-en="Email Address" data-fo="T-postur">Email Address</label>
-              <input type="email" id="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
             <div class="form-group">
               <label for="message" data-en="Message" data-fo="Fráboðan">Message</label>
-              <textarea id="message" rows="4" required></textarea>
+              <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" data-en="Send Message" data-fo="Send fráboðan">Send
-              Message</button>
+            <button type="submit" class="btn btn-primary" data-en="Open Email App" data-fo="Lat teldupost upp">Open
+              Email App</button>
           </form>
         </div>
       </div>
@@ -580,7 +596,7 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 
 </html>
