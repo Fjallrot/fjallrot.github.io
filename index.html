@@ -37,6 +37,11 @@
   </script>
 
   <link rel="icon" type="image/png" href="logo4.png">
+
+  <!-- Faster font loading than CSS @import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=optional">
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -52,7 +57,7 @@
   <header id="header">
     <div class="nav-container">
       <a class="logo-wrapper" href="#hero" aria-label="Fjallrót home">
-        <img src="logo4.png" alt="Fjallrót Logo" class="logo-svg" decoding="async">
+        <img src="logo4.png" alt="Fjallrót Logo" class="logo-svg" width="512" height="512" decoding="async">
         <span>Fjallrót</span>
       </a>
 
@@ -79,7 +84,7 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-container">
-      <img src="logo4.png" alt="Fjallrót Logo" class="hero-logo-big" decoding="async" fetchpriority="high">
+      <img src="logo4.png" alt="Fjallrót Logo" class="hero-logo-big" width="512" height="512" decoding="async" fetchpriority="high">
       <div class="hero-tag" data-en="Independent Software Developer" data-fo="Sjálvstøðugur ritbúnaðarmenjari">Independent Software Developer</div>
       <h1 data-en="Privacy-focused software built in the Faroe Islands" data-fo="Privatlívsverjandi ritbúnaður mentur í Føroyum">Privacy-focused software built in the Faroe Islands</h1>
       <p class="hero-desc"

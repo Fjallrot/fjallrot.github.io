@@ -126,15 +126,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Scroll Header Styles
+  // 3. Scroll Header Styles — scheduled once per animation frame
+  const header = document.getElementById('header');
+  let scrollFramePending = false;
+
+  const updateHeaderState = () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+    scrollFramePending = false;
+  };
+
   window.addEventListener('scroll', () => {
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+    if (!scrollFramePending) {
+      scrollFramePending = true;
+      window.requestAnimationFrame(updateHeaderState);
     }
-  });
+  }, { passive: true });
+
+  updateHeaderState();
 
   // 4. App Card Click Listeners
   const appCards = document.querySelectorAll('.app-card');
