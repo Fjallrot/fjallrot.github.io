@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
 
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
 
 Sitemap: https://fjallrot.com/sitemap.xml
