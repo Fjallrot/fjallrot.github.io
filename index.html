@@ -7,7 +7,9 @@
   <title>Fjallrót - Privacy-Focused Mobile Apps from the Faroe Islands</title>
   <meta name="description"
     content="Fjallrót is an independent software developer building offline-first, native Android & AI applications for the Faroe Islands. Prioritizing user safety and privacy. Not affiliated with any government entity.">
-    <meta name="google-site-verification" content="AhpWqZw-EHjRRwMjivdDF2WdB519p-YWfKk_PlI8Jbs" />
+  <meta name="google-site-verification" content="AhpWqZw-EHjRRwMjivdDF2WdB519p-YWfKk_PlI8Jbs">
+  <meta name="theme-color" content="#060913">
+  <link rel="icon" type="image/png" href="logo4.png">
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -22,10 +24,10 @@
   <!-- Header -->
   <header id="header">
     <div class="nav-container">
-      <div class="logo-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      <a class="logo-wrapper" href="#hero" aria-label="Fjallrót home">
         <img src="logo4.png" alt="Fjallrót Logo" class="logo-svg">
         <span>Fjallrót</span>
-      </div>
+      </a>
 
       <nav id="nav-menu">
         <a href="#about" data-en="About" data-fo="Um okkum">About</a>
@@ -33,12 +35,13 @@
         <a href="#apps" data-en="My Apps" data-fo="Mínar smáforrit">My Apps</a>
         <a href="#contact" data-en="Contact" data-fo="Samband">Contact</a>
         <div class="lang-switch">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="fo">FO</button>
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="fo" aria-pressed="false">FO</button>
         </div>
       </nav>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu"
+        aria-controls="nav-menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -505,7 +508,7 @@
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <span>Fjallrot22@gmail.com</span>
+                <a href="mailto:Fjallrot22@gmail.com">Fjallrot22@gmail.com</a>
               </div>
               <div class="contact-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

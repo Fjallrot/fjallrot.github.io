@@ -254,8 +254,7 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, rgba(13, 18, 34, 0.2) 0%, rgba(6, 9, 19, 0.9) 100%), 
-              url('assets/hero-bg.jpg') no-repeat center center/cover;
+  background: radial-gradient(circle at center, rgba(13, 18, 34, 0.2) 0%, rgba(6, 9, 19, 0.9) 100%);
   padding-top: 80px;
   overflow: hidden;
 }

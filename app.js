@@ -96,8 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const langBtns = document.querySelectorAll('.lang-switch .lang-btn');
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      langBtns.forEach(b => b.classList.remove('active'));
+      langBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
       const lang = btn.getAttribute('data-lang');
       setLanguage(lang);
     });
@@ -107,8 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
   menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    menuToggle.classList.toggle('open');
+    const isOpen = navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
   // Close nav menu on link clicks
@@ -117,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('active');
       menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 
