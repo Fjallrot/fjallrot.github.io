@@ -1,612 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fjallrót — Privacy-Focused Software from the Faroe Islands</title>
-  <meta name="description"
-    content="Fjallrót is an independent Faroese software developer building privacy-focused, offline-first Android and on-device AI applications.">
-  <meta name="google-site-verification" content="AhpWqZw-EHjRRwMjivdDF2WdB519p-YWfKk_PlI8Jbs">
-  <meta name="theme-color" content="#060913">
-  <link rel="canonical" href="https://fjallrot.com/">
+    <meta charset="UTF-8">
 
-  <!-- Social sharing -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Fjallrót">
-  <meta property="og:title" content="Fjallrót — Privacy-Focused Software from the Faroe Islands">
-  <meta property="og:description" content="Independent, privacy-focused Android and on-device AI applications built in the Faroe Islands.">
-  <meta property="og:url" content="https://fjallrot.com/">
-  <meta property="og:image" content="https://fjallrot.com/logo4.png">
-  <meta property="og:image:alt" content="Fjallrót logo">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fjallrót — Privacy-Focused Software">
-  <meta name="twitter:description" content="Independent, privacy-focused software built in the Faroe Islands.">
-  <meta name="twitter:image" content="https://fjallrot.com/logo4.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Fjallrót",
-    "url": "https://fjallrot.com/",
-    "logo": "https://fjallrot.com/logo4.png",
-    "email": "info@fjallrot.com",
-    "description": "Independent Faroese software developer building privacy-focused, offline-first Android and on-device AI applications."
-  }
-  </script>
+    <title>Fjallrót — Software du kan stole på</title>
 
-  <link rel="icon" type="image/png" href="logo4.png">
+    <meta name="description" content="Fjallrót bygger pålidelig software med fokus på privatliv, sikkerhed, enkelhed og en rolig brugeroplevelse.">
 
-  <!-- Faster font loading than CSS @import -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=optional" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=optional"></noscript>
-  <link rel="preload" as="image" href="logo4.png" fetchpriority="high">
-  <link rel="stylesheet" href="index.css">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://fjallrot.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fjallrót">
+    <meta property="og:title" content="Fjallrót — Software du kan stole på">
+    <meta property="og:description" content="Vi bygger software, som mennesker kan stole på og føle sig trygge ved at bruge.">
+    <meta property="og:url" content="https://fjallrot.com/">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#0d0f12">
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo6-1.svg">
+
+    <link rel="apple-touch-icon" href="assets/images/logo6-1.svg">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-  <!-- Ambient Glows -->
-  <div class="ambient-glows">
-    <div class="glow-1"></div>
-    <div class="glow-2"></div>
-  </div>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
 
-  <!-- Header -->
-  <header id="header">
-    <div class="nav-container">
-      <a class="logo-wrapper" href="#hero" aria-label="Fjallrót home">
-        <img src="logo4.png" alt="Fjallrót Logo" class="logo-svg" width="40" height="40" decoding="async" loading="eager">
-        <span>Fjallrót</span>
-      </a>
+            <a href="index.html" class="logo-link" aria-label="Gå til Fjallróts forside">
+                <img src="assets/images/logo6-1.svg" alt="Fjallrót logo" class="logo-img" width="56" height="56">
 
-      <nav id="nav-menu">
-        <a href="#about" data-en="About" data-fo="Um okkum">About</a>
-        <a href="#philosophy" data-en="Philosophy" data-fo="Hugsjón">Philosophy</a>
-        <a href="#apps" data-en="My Apps" data-fo="Mínar smáforrit">My Apps</a>
-        <a href="#contact" data-en="Contact" data-fo="Samband">Contact</a>
-        <div class="lang-switch">
-          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-btn" data-lang="fo" aria-pressed="false">FO</button>
-        </div>
-      </nav>
+                <span class="logo-text">
+          Fjall<span>rót</span>
+                </span>
+            </a>
 
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu"
-        aria-controls="nav-menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+            <button class="burger-menu" type="button" aria-label="Åbn menu" aria-controls="main-navigation" aria-expanded="false">
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="burger-line" aria-hidden="true"></span>
       </button>
-    </div>
-  </header>
 
-  <main id="main-content">
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-container">
-      <img src="logo4.png" alt="Fjallrót Logo" class="hero-logo-big" width="512" height="512" decoding="sync" loading="eager" fetchpriority="high">
-      <div class="hero-tag" data-en="Independent Software Developer" data-fo="Sjálvstøðugur ritbúnaðarmenjari">Independent Software Developer</div>
-      <h1 data-en="Privacy-focused software built in the Faroe Islands" data-fo="Privatlívsverjandi ritbúnaður mentur í Føroyum">Privacy-focused software built in the Faroe Islands</h1>
-      <p class="hero-desc"
-        data-en="Creating clean, efficient Android and on-device AI applications that respect your privacy, work seamlessly offline, and solve practical problems. Independent developer, not affiliated with any government entity."
-        data-fo="Vit menna rein og skjót Android- og AI-smáforrit, sum virða títt privatlív, rigga uttan internet og loysa ítøkiligar trupulleikar. Sjálvstøðugur menjari, ikki knýttur at nøkrum stovni.">
-        Creating clean, efficient Android and on-device AI applications that respect your privacy, work seamlessly offline,
-        and solve practical problems. Independent developer, not affiliated with any government entity.</p>
-      <div class="btn-group">
-        <a href="#apps" class="btn btn-primary" data-en="View My Apps" data-fo="Sí míni forrit">View My Apps</a>
-        <a href="#contact" class="btn btn-secondary" data-en="Get in touch" data-fo="Set teg í samband">Get in touch</a>
-      </div>
-    </div>
-  </section>
+            <nav id="main-navigation" aria-label="Hovednavigation">
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html" class="active" aria-current="page" data-i18n="nav_home">
+              Hjem
+            </a>
+                    </li>
 
-  <!-- Philosophy & Safety -->
-  <section id="philosophy">
-    <div class="section-container">
-      <div class="section-hdr">
-        <h2 data-en="Rooted in Trust & Safety" data-fo="Rætur í trygd og áliti">Rooted in Trust & Safety</h2>
-        <p data-en="Safety isn't just a feature, it's our foundation. Inspired by the mountain root (Fjallrót), our apps stand firm in protecting your rights."
-          data-fo="Trygd er ikki bara ein eginleiki, tað er grundvøllurin. Innblást av fjallarótini standa okkara forrit føst í at verja tíni rættindi.">
-          Safety isn't just a feature, it's our foundation. Inspired by the mountain root (Fjallrót), our apps stand
-          firm in protecting your rights.</p>
-      </div>
+                    <li>
+                        <a href="standard.html" data-i18n="nav_standards">
+              Standarder
+            </a>
+                    </li>
 
-      <div class="philosophy-grid">
-        <div class="phil-card">
-          <div class="phil-icon">
-            <!-- Shield lock icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
-          </div>
-          <h3 data-en="Privacy & Security" data-fo="Privatlív & Trygd">Privacy & Security</h3>
-          <p data-en="No telemetry, no tracking, and no unnecessary permissions. Your personal details and search history never leave your device."
-            data-fo="Ongin sporing, ongar lýsingar, og ongar óneyðugar loyvir. Tíni persónligu dáta fara ongantið av tíni eind.">
-          </p>
+                    <li>
+                        <a href="privacy.html" data-i18n="nav_privacy">
+              Privatliv
+            </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html" data-i18n="nav_terms">
+              Betingelser
+            </a>
+                    </li>
+
+                    <li>
+                        <a href="security.html">Sikkerhed</a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
+    </header>
 
-        <div class="phil-card">
-          <div class="phil-icon">
-            <!-- Offline cloud off icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5l14 14" />
-              <path d="M17 17H5a5 5 0 0 1-1.78-9.68" />
-            </svg>
-          </div>
-          <h3 data-en="Offline Capability" data-fo="Fult virki uttan net">Offline Capability</h3>
-          <p data-en="Designed for the Faroese terrain. All law texts, recipe databases, and core functionalities work completely offline."
-            data-fo="Gjørt til føroyska landslagið. Allir lógartiklar, uppskriftir og kjarnuvirksemi rigga heilt uttan internet.">
-          </p>
-        </div>
+    <main>
 
-        <div class="phil-card">
-          <div class="phil-icon">
-            <!-- Community heart icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-          </div>
-          <h3 data-en="Faroese Community" data-fo="Føroysk Mentan">Faroese Community</h3>
-          <p data-en="Creating digital resources that preserve Faroese heritage and guide local citizens. Native translation and local relevance."
-            data-fo="Vit skapa talgildar rættindi sum varðveita føroyskan arva og leiðbeina borgarum. Føroysk týðing og staðbundið virði.">
-          </p>
-        </div>
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-gradient-overlay" aria-hidden="true"></div>
 
-        <div class="phil-card">
-          <div class="phil-icon">
-            <!-- Code clean icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg>
-          </div>
-          <h3 data-en="Clean Architecture" data-fo="Reinur Arkitektur">Clean Architecture</h3>
-          <p data-en="Built natively using modern Android patterns, Kotlin, and local databases. No battery drain, bloatware, or lag."
-            data-fo="Smíðað sum nativt forrit við Kotlin og staðbundnum dátugrunnum. Ongin óneyðug battarínýtsla ella seinking.">
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div class="container">
 
-  <!-- My Apps Section (Split layout with interactive phone mockup) -->
-  <section id="apps">
-    <div class="section-container">
-      <div class="section-hdr">
-        <h2 data-en="Projects in Development" data-fo="Verkætlanir í menning">Projects in Development</h2>
-        <p data-en="Explore current projects, their planned features, and the interactive previews."
-          data-fo="Kanna verandi verkætlanir, ætlaðar eginleikar og interaktiv sýnishorn.">Explore current projects, their planned
-          features, and the interactive previews.</p>
-      </div>
+                <h1 id="hero-title" data-i18n="hero_title">
+                    Fremtidens teknologi er enkel og respektfuld
+                </h1>
 
-      <div class="apps-split">
-        <!-- List of Apps -->
-        <div class="apps-list">
-          <!-- App 1: Rættarvísi -->
-          <div class="app-card active" data-app="raettarvisi">
-            <div class="app-card-hdr">
-              <div class="app-icon">
-                <!-- Scale of justice vector -->
-                <svg viewBox="0 0 100 100" fill="none" stroke="#00f2fe" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M 50 15 L 50 85" stroke-width="4" stroke-linecap="round" />
-                  <path d="M 25 30 L 75 30" stroke-width="4" stroke-linecap="round" />
-                  <path d="M 25 30 L 15 55 L 35 55 Z" stroke-width="3" fill="rgba(0,242,254,0.1)"
-                    stroke-linejoin="round" />
-                  <path d="M 75 30 L 65 55 L 85 55 Z" stroke-width="3" fill="rgba(0,242,254,0.1)"
-                    stroke-linejoin="round" />
-                  <path d="M 35 85 L 65 85" stroke-width="6" stroke-linecap="round" />
-                </svg>
-              </div>
-              <div class="app-meta">
-                <h3>Rættarvísi</h3>
-                <span class="app-tag" data-en="Legal Guide" data-fo="Lógarkennari">Legal Guide</span>
-              </div>
+                <p class="subtitle" data-i18n="hero_subtitle">
+                    Fjallrót bygger software, der løser virkelige problemer uden at gøre brugerens oplysninger til en forretning. Vores mål er at skabe pålidelige produkter med stærk databeskyttelse, gennemsigtige principper og en rolig brugeroplevelse.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="standard.html" class="btn btn-primary" data-i18n="btn_read_standards">
+            Læs vores standarder
+          </a>
+
+                    <a href="#about" class="btn btn-secondary" data-i18n="btn_who_are_we">
+            Hvem er vi?
+          </a>
+                </div>
+
+                <p class="hero-purpose">
+                    Fjallrót bygger software, som mennesker kan stole på og føle sig trygge ved at bruge.
+                </p>
+
             </div>
-            <p data-en="A comprehensive law guide for citizens in the Faroe Islands. Navigate statutes, civil rights, and legal definitions offline. Purely informative, entirely private. Not affiliated with any government body - for informational purposes only."
-               data-fo="Ein løtt og greið lógveiting til føroyskar borgarar. Les greinar, borgararættindi og lógarorð uttan net. Tíðindagott og heilt privat. Ikki knýtt at nøkrum stovni - bert til kunningar.">
-              A comprehensive law guide for citizens in the Faroe Islands. Navigate statutes, civil rights, and legal
-              definitions offline. Purely informative, entirely private. Not affiliated with any government body - for informational purposes only.</p>
+        </section>
 
-            <div class="app-features">
-              <div class="app-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-en="Complete Faroese law codes stored offline"
-                  data-fo="Føroyska lógarsavnið lagt á eindina">Complete Faroese law codes stored offline</span>
-              </div>
-              <div class="app-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-en="Fast, privacy-safe keyword search" data-fo="Snarligt og privat leititól">Fast,
-                  privacy-safe keyword search</span>
-              </div>
-              <div class="app-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-en="Plain language guidelines on common rights"
-                  data-fo="Løtt greiðsla av vanligum rættindum">Plain language guidelines on common rights</span>
-              </div>
+        <!-- Constitution and values -->
+        <section id="about" class="content-section" aria-labelledby="constitution-title">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2 id="constitution-title" data-i18n="const_title">
+                        Vores fundament
+                    </h2>
+
+                    <p data-i18n="const_subtitle">
+                        Fjallrót bygger på klare principper, der hjælper os med at prioritere mennesker, ansvarlighed og langsigtet tillid.
+                    </p>
+                </div>
+
+                <div class="grid">
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">
+                            👤
+                        </div>
+
+                        <h3 data-i18n="card_user_title">
+                            Brugeren er aldrig produktet
+                        </h3>
+
+                        <p data-i18n="card_user_text">
+                            Vi sælger ikke brugeroplysninger og bygger ikke vores forretning på reklamer eller skjult profilering. Vores produkter skal skabe direkte og forståelig værdi.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">
+                            🔒
+                        </div>
+
+                        <h3 data-i18n="card_sec_title">
+                            Databeskyttelse som standard
+                        </h3>
+
+                        <p data-i18n="card_sec_text">
+                            Når vi opbevarer brugerdata, beskytter vi dem med velafprøvet kryptering, passende adgangskontrol og sikre udviklings- og driftsprocedurer.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">
+                            🌿
+                        </div>
+
+                        <h3 data-i18n="card_stress_title">
+                            Teknologi skal reducere stress
+                        </h3>
+
+                        <p data-i18n="card_stress_text">
+                            Vi undgår manipulerende design, unødvendige afbrydelser og konstante notifikationer. Produkterne skal føles rolige, hurtige og behagelige at bruge.
+                        </p>
+                    </article>
+
+                </div>
             </div>
+        </section>
 
-            <span class="play-badge" role="status" aria-label="Google Play release coming soon">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M3 5.27v13.46c0 .82.68 1.43 1.47 1.25l13.14-6.73c.72-.37.72-1.4 0-1.77L4.47 4.02C3.68 3.84 3 4.45 3 5.27z" />
+        <!-- Products -->
+        <section class="content-section products-section" aria-labelledby="products-title">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2 id="products-title" data-i18n="prod_title">
+                        Vores applikationer
+                    </h2>
+
+                    <p data-i18n="prod_subtitle">
+                        Hvert produkt udvikles efter de samme principper om pålidelighed, sikkerhed, privatliv og enkelhed.
+                    </p>
+                </div>
+
+                <div class="grid">
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">
+                            🍲
+                        </div>
+
+                        <h3>Recipe Vault</h3>
+
+                        <p data-i18n="card_recipe_desc">
+                            En privat opskriftsapp, der udvikles med lokal databehandling, en krypteret database og praktiske funktioner til brug i køkkenet.
+                        </p>
+
+                        <a href="standard.html#08-products" class="card-link" aria-label="Læs mere om Recipe Vault">
+                            <span data-i18n="card_read_more">
+                Læs mere
+              </span>
+
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
-              <div class="play-badge-text">
-                <span data-en="Coming soon on" data-fo="Kemur skjótt á">Coming soon on</span>
-                <span>Google Play</span>
-              </div>
-            </span>
-          </div>
+                        </a>
+                    </article>
 
-          <!-- App 2: Recipe App -->
-          <div class="app-card" data-app="recipe">
-            <div class="app-card-hdr">
-              <div class="app-icon">
-                <!-- Cooking pot icon -->
-                <svg viewBox="0 0 100 100" fill="none" stroke="#00f2fe" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M 20 40 L 80 40 L 75 75 C 75 80 70 85 60 85 L 40 85 C 30 85 25 80 25 75 Z" stroke-width="4"
-                    fill="rgba(0,242,254,0.1)" stroke-linejoin="round" />
-                  <path d="M 15 40 L 85 40" stroke-width="5" stroke-linecap="round" />
-                  <path d="M 50 15 L 50 30" stroke-width="4" stroke-linecap="round" />
-                  <path d="M 40 22 C 40 22 45 25 50 22 C 55 19 60 22 60 22" stroke-width="2.5" stroke-linecap="round" />
-                  <path d="M 15 48 C 10 48 10 58 15 58" stroke-width="3" stroke-linecap="round" />
-                  <path d="M 85 48 C 90 48 90 58 85 58" stroke-width="3" stroke-linecap="round" />
-                </svg>
-              </div>
-              <div class="app-meta">
-                <h3 data-en="Recipe App" data-fo="Matuppskriftir">Recipe App</h3>
-                <span class="app-tag" data-en="Culinary Heritage" data-fo="Matararvur">Culinary Heritage</span>
-              </div>
-            </div>
-            <p data-en="Preserving Faroese food traditions. Access authentic, step-by-step recipes for skerpikjøt, ræstur fiskur, and homebaked rhubarb pies. Features portion adjustment toggles and works completely offline."
-              data-fo="Varðveit føroyska matmentan. Finnið uppskriftir til skerpikjøt, ræstan fisk, og rabarbugreyt. Forritið riggar heilt uttan netsamband og hevur skamtarstillingar.">
-              Preserving Faroese food traditions. Access authentic, step-by-step recipes for skerpikjøt, ræstur fiskur,
-              and homebaked rhubarb pies. Features portion adjustment toggles and works completely offline.</p>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">
+                            ⚖️
+                        </div>
 
-            <div class="app-features">
-              <div class="app-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-en="Traditional Faroese methods & drying guides"
-                  data-fo="Føroyskir matgerðarhættir og hjallaleiðbeiningar">Traditional Faroese methods & drying
-                  guides</span>
-              </div>
-              <div class="app-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-en="Scaling calculator for different dinner servings"
-                  data-fo="Skamtarroknari eftir gestatali">Scaling calculator for different dinner servings</span>
-              </div>
-              <div class="app-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span data-en="Offline database for cooking in remote cottages"
-                  data-fo="Dátugrunnur riggar í hjallinum og summarhúsinum">Offline database for cooking in remote
-                  cottages</span>
-              </div>
-            </div>
+                        <h3>Rættarvísi</h3>
 
-            <span class="play-badge" role="status" aria-label="Google Play release coming soon">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M3 5.27v13.46c0 .82.68 1.43 1.47 1.25l13.14-6.73c.72-.37.72-1.4 0-1.77L4.47 4.02C3.68 3.84 3 4.45 3 5.27z" />
+                        <p data-i18n="card_law_desc">
+                            Et mobilt digitalt lovbibliotek til færøsk lovgivning med effektiv fuldtekstsøgning, lokal adgang og fokus på beskyttelse af brugerens oplysninger.
+                        </p>
+
+                        <a href="standard.html#08-products" class="card-link" aria-label="Læs mere om Rættarvísi">
+                            <span data-i18n="card_read_more">
+                Læs mere
+              </span>
+
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
-              <div class="play-badge-text">
-                <span data-en="Coming soon on" data-fo="Kemur skjótt á">Coming soon on</span>
-                <span>Google Play</span>
-              </div>
-            </span>
-          </div>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">
+                            🏘️
+                        </div>
+
+                        <h3>Vinabýur</h3>
+
+                        <p data-i18n="card_neighborhood_desc">
+                            Et digitalt lokalsamfund, der skal gøre det nemmere for mennesker at kommunikere, hjælpe hinanden og skabe trygge forbindelser med tydelige adgangsgrænser.
+                        </p>
+
+                        <a href="standard.html#08-products" class="card-link" aria-label="Læs mere om Vinabýur">
+                            <span data-i18n="card_read_more">
+                Læs mere
+              </span>
+
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo-link footer-logo-link" aria-label="Gå til Fjallróts forside">
+                    <img src="assets/images/logo6-1.svg" alt="Fjallrót logo" class="logo-img footer-logo-img" width="42" height="42" />
+
+                    <span>
+            Fjall<span>rót</span>
+                    </span>
+                </a>
+
+                <p class="tagline" data-i18n="footer_tagline">
+                    Bygget på principper om tillid, privatliv og kvalitet.
+                </p>
+            </div>
+
+            <nav aria-label="Sidefod">
+                <ul class="footer-links">
+                    <li>
+                        <a href="standard.html" data-i18n="nav_standards">
+              Standarder
+            </a>
+                    </li>
+
+                    <li>
+                        <a href="privacy.html" data-i18n="nav_privacy">
+              Privatliv
+            </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html" data-i18n="nav_terms">
+              Betingelser
+            </a>
+                    </li>
+
+                    <li>
+                        <a href="legal/disclaimer.html">
+              Ansvarsbegrænsning
+            </a>
+                    </li>
+
+                    <li>
+                        <a href="llms.txt">
+              AI-indeks
+            </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="footer-copy" data-i18n="footer_copy">
+                &copy; 2026 Fjallrót. Alle rettigheder forbeholdes.
+            </div>
+
         </div>
+    </footer>
 
-        <!-- Phone Simulator Column -->
-        <div class="simulator-sticky">
-          <div class="phone-mockup">
-            <div class="phone-notch">
-              <div class="camera-dot"></div>
-            </div>
-            <div class="phone-inner">
+    <!-- Scripts -->
+    <script src="assets/js/translations.js" defer></script>
 
-              <!-- Rættarvísi Simulated Screen -->
-              <div class="screen-content active" id="screen-raettarvisi">
-                <div class="law-header">
-                  <!-- scale outline -->
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="9" x2="19" y2="9" />
-                    <path d="M5 9 Q1 13 5 17 Q9 13 5 9" />
-                    <path d="M19 9 Q15 13 19 17 Q23 13 19 9" />
-                  </svg>
-                  <h4>Rættarvísi</h4>
-                </div>
-                <div class="law-search">
-                  <input type="text" class="search-bar" placeholder="Search laws..."
-                    data-en-placeholder="Search laws..." data-fo-placeholder="Leita í lógum...">
-                </div>
-                <div class="law-scroll">
-                  <div class="law-card" onclick="openLawDetail('almannalogin')">
-                    <h5>Almannalógin <span data-en="Social" data-fo="Almanna">Social</span></h5>
-                    <p data-en="Act on social services and benefits for citizens in the Faroe Islands."
-                      data-fo="Lóg um almannatænastur og veitingar til føroyskar borgarar.">Act on social services and
-                      benefits for citizens in the Faroe Islands.</p>
-                  </div>
-                  <div class="law-card" onclick="openLawDetail('styriskipislogin')">
-                    <h5>Stýrisskipanarlógin <span data-en="Constitution" data-fo="Stjórn">Constitution</span></h5>
-                    <p data-en="The constitutional framework and basic rights of the Faroese home rule."
-                      data-fo="Kjarnarættindi og heimildir hjá Føroya landsstýri.">The constitutional framework and
-                      basic rights of the Faroese home rule.</p>
-                  </div>
-                  <div class="law-card" onclick="openLawDetail('barnalogin')">
-                    <h5>Barnalógin <span data-en="Family" data-fo="Familja">Family</span></h5>
-                    <p data-en="Legal rights, custody, and child welfare statutes in Faroese law."
-                      data-fo="Barnsins rættindi, foreldramyndugleiki og barnavernd.">Legal rights, custody, and child
-                      welfare statutes in Faroese law.</p>
-                  </div>
-                </div>
+    <script src="assets/js/main.js" defer></script>
 
-                <!-- Law Detail Modal inside simulator -->
-                <div class="law-detail-view" id="law-detail-view">
-                  <div class="back-btn" onclick="closeLawDetail()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="19" y1="12" x2="5" y2="12" />
-                      <polyline points="12 19 5 12 12 5" />
-                    </svg>
-                    <span data-en="Back" data-fo="Aftur">Back</span>
-                  </div>
-                  <h5 id="law-detail-title">Law Title</h5>
-                  <p id="law-detail-text"
-                    style="font-size:0.75rem; color:#d1d5db; line-height: 1.4; overflow-y:auto; flex:1;">Law text...</p>
-                </div>
-              </div>
-
-              <!-- Recipe Simulated Screen -->
-              <div class="screen-content" id="screen-recipe">
-                <div class="recipe-header">
-                  <!-- Pot outline -->
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 9h18v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9z" />
-                    <path d="M12 2v7" />
-                    <path d="M9 5h6" />
-                  </svg>
-                  <h4 data-en="Føroyskur Matur" data-fo="Føroyskur Matur">Føroyskur Matur</h4>
-                </div>
-                <div class="recipe-categories">
-                  <span class="recipe-tab active" onclick="filterRecipes('all', this)" data-en="All" data-fo="Alt">All</span>
-                  <span class="recipe-tab" onclick="filterRecipes('meat', this)" data-en="Meat" data-fo="Kjøt">Meat</span>
-                  <span class="recipe-tab" onclick="filterRecipes('fish', this)" data-en="Fish" data-fo="Fiskur">Fish</span>
-                </div>
-                <div class="recipe-scroll" id="recipe-list">
-                  <div class="recipe-card" data-category="meat" onclick="openRecipeDetail('skerpikjot')">
-                    <div class="recipe-img-placeholder">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                      </svg>
-                    </div>
-                    <div class="recipe-info">
-                      <h5>Skerpikjøt</h5>
-                      <span data-en="Wind-dried mutton" data-fo="Ræst og turt kjøt">Wind-dried mutton</span>
-                    </div>
-                  </div>
-                  <div class="recipe-card" data-category="fish" onclick="openRecipeDetail('raestur-fiskur')">
-                    <div class="recipe-img-placeholder">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M23 12c-2.4 4-6.4 6-11 6S3.6 16 1.2 12c2.4-4 6.4-6 11-6s8.6 2 11 6z" />
-                        <circle cx="12" cy="12" r="3" />
-                      </svg>
-                    </div>
-                    <div class="recipe-info">
-                      <h5>Ræstur Fiskur</h5>
-                      <span data-en="Fermented fish" data-fo="Hangaður fiskur">Fermented fish</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Recipe Detail Modal inside simulator -->
-                <div class="recipe-detail-view" id="recipe-detail-view">
-                  <div class="back-btn" onclick="closeRecipeDetail()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="19" y1="12" x2="5" y2="12" />
-                      <polyline points="12 19 5 12 12 5" />
-                    </svg>
-                    <span data-en="Back" data-fo="Aftur">Back</span>
-                  </div>
-                  <h5 class="recipe-detail-title" id="recipe-detail-title">Recipe Name</h5>
-                  <div class="recipe-detail-meta" id="recipe-detail-meta">Ready in 2 hours</div>
-
-                  <div class="recipe-section-title" data-en="Ingredients" data-fo="Tilfar">Ingredients</div>
-                  <ul class="recipe-ingredients-list" id="recipe-detail-ingredients">
-                    <li>Ingredient item</li>
-                  </ul>
-
-                  <div class="recipe-section-title" data-en="Instructions" data-fo="Gjørt soleiðis">Instructions</div>
-                  <p class="recipe-instructions" id="recipe-detail-instructions">Directions details...</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="section-container">
-      <div class="about-split">
-        <div class="about-text">
-          <h2 data-en="Independent Developer" data-fo="Sjálvstøðugur Menjari">Independent Developer</h2>
-          <h3 data-en="Based in Faroe Islands, building for the world." data-fo="Búsettur í Føroyum, mennir til heimin.">Based
-            in Faroe Islands, building for the world.</h3>
-          <p data-en="Hi! I am a Faroese software developer specializing in native Android and local AI models. I believe in software that serves a practical purpose, runs efficiently, and respects the digital autonomy of users."
-            data-fo="Hey! Eg eri ein føroyskur ritbúnaðarmenjari, sum hevur sergrein innan Android-menning og lokalar AI-skipanir. Eg trúgvi upp á forrit sum loysa ítøkiligir uppgávur uttan óneyðugar sporingar ella seinkingar.">
-            Hi! I am a Faroese software developer specializing in native Android and local AI models. I believe in
-            software that serves a practical purpose, runs efficiently, and respects the digital autonomy of users.</p>
-          <p data-en="Whether preserving traditional culinary heritage or mapping local statutes, each application is built with a focus on simplicity, responsiveness, and absolute privacy. No tracking. No bloatware. Fjallrót is an independent developer and is not affiliated with, endorsed by, or connected to any government entity."
-            data-fo="Hvort tað er at varðveita føroyskan matararv ella savna landsins lógir, so er hvørt forrit gjørt við atliti til einfaldleika, snarleika og fult privatlív. Ongin sporing. Ongin fyllufólk. Fjallrót er ein sjálvstøðugur menjari og er ikki knýttur at, góðkendur av, ella sambandin við nøkrum stovni.">
-            Whether preserving traditional culinary heritage or mapping local statutes, each application is built with a
-            focus on simplicity, responsiveness, and absolute privacy. No tracking. No bloatware. Fjallrót is an independent developer and is not affiliated with, endorsed by, or connected to any government entity.</p>
-        </div>
-
-        <div class="tech-grid">
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
-              <line x1="7" y1="2" x2="7" y2="22" />
-              <line x1="17" y1="2" x2="17" y2="22" />
-              <line x1="2" y1="12" x2="22" y2="12" />
-            </svg>
-            <h4 data-en="Kotlin & Jetpack" data-fo="Kotlin & Jetpack">Kotlin & Jetpack</h4>
-            <p data-en="Native performance, reactive layouts, and modern architecture templates."
-              data-fo="Nativur fartur, reaktivt snið og nýmótins arkitekturur.">Native performance, reactive layouts,
-              and modern architecture templates.</p>
-          </div>
-
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <ellipse cx="12" cy="5" rx="9" ry="3" />
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-              <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" />
-            </svg>
-            <h4 data-en="Offline SQLite" data-fo="SQLite uttan net">Offline SQLite</h4>
-            <p data-en="Local SQLite and Room databases for high speed offline searching."
-              data-fo="SQLite og Room dátugrunnar fyri skjóta leitining uttan net.">Local SQLite and Room databases for
-              high speed offline searching.</p>
-          </div>
-
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path
-                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-              <line x1="12" y1="22.08" x2="12" y2="12" />
-            </svg>
-            <h4 data-en="On-Device AI" data-fo="AI á eindini">On-Device AI</h4>
-            <p data-en="TensorFlow Lite models running on local hardware to respect private inputs."
-              data-fo="Lokalir AI-samleikar koyra á telefonini so títt dáta verður hjá tær.">TensorFlow Lite models
-              running on local hardware to respect private inputs.</p>
-          </div>
-
-          <div class="tech-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2" />
-              <polyline points="2 17 12 22 22 17" />
-              <polyline points="2 12 12 17 22 12" />
-            </svg>
-            <h4 data-en="Material 3" data-fo="Material 3 snið">Material 3</h4>
-            <p data-en="Beautiful responsive, accessible layouts following current guidelines."
-              data-fo="Faldir og brúkaravinarligir skíggjar sambært nýggjastu stílleiði.">Beautiful responsive,
-              accessible layouts following current guidelines.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="section-container">
-      <div class="contact-container">
-        <div class="contact-card">
-          <div class="contact-info">
-            <h2 data-en="Let's Connect" data-fo="Set teg í samband">Let's Connect</h2>
-            <p data-en="Have a project in mind or interested in collaborating? Reach out or visit my social profiles."
-              data-fo="Hevur tú eina verkætlan í hyggju, ella vilt tú samstarva? Send eina frágreiðing ella vitja míni profilir.">
-              Have a project in mind or interested in collaborating? Reach out or visit my social profiles.</p>
-
-            <div class="contact-details">
-              <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-                <a href="mailto:info@fjallrot.com">info@fjallrot.com</a>
-              </div>
-              <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <span data-en="Faroe Islands" data-fo="Føroyar">Faroe Islands</span>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a href="https://github.com/Fjallrot" class="social-link" aria-label="Fjallrót on GitHub"
-                target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                </svg>
-              </a>
-              <a href="mailto:info@fjallrot.com" class="social-link" aria-label="Email Fjallrót">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <form class="contact-form" id="contact-form"
-            onsubmit="event.preventDefault(); const n=document.getElementById('name').value.trim(); const e=document.getElementById('email').value.trim(); const m=document.getElementById('message').value.trim(); const subject='Website enquiry from ' + n; const body='Name: ' + n + '\nEmail: ' + e + '\n\nMessage:\n' + m; window.location.href='mailto:info@fjallrot.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);">
-            <div class="form-group">
-              <label for="name" data-en="Your Name" data-fo="Navn">Your Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email" data-en="Email Address" data-fo="T-postur">Email Address</label>
-              <input type="email" id="email" name="email" autocomplete="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message" data-en="Message" data-fo="Fráboðan">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" data-en="Open Email App" data-fo="Lat teldupost upp">Open
-              Email App</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="section-container">
-      <p>&copy; 2026 Fjallrót. All rights reserved. Built offline, respecting privacy.</p>
-      <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 0.5rem;">
-        <span data-en="Disclaimer: Fjallrót is an independent software developer. This website and its applications are not affiliated with, endorsed by, or connected to any government entity. Legal content is for informational purposes only and should not be considered legal advice."
-              data-fo="Fráboðan: Fjallrót er ein sjálvstøðugur ritbúnaðarmenjari. Heimasíðan og forritini eru ikki knýtt at, góðkend av, ella sambandin við nøkrum stovni. Lógarinnihald er bert til kunningar og eigur ikki at verða sæð sum løgfrøðilig ráðgeving.">
-          Disclaimer: Fjallrót is an independent software developer. This website and its applications are not affiliated with, endorsed by, or connected to any government entity. Legal content is for informational purposes only and should not be considered legal advice.
-        </span>
-      </p>
-    </div>
-  </footer>
-
-  <script src="app.js" defer></script>
 </body>
 
 </html>

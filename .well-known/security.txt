@@ -1,0 +1,6 @@
+Contact: mailto:security@fjallrot.com
+Contact: https://fjallrot.com/security.html
+Expires: 2027-07-16T23:59:59.000Z
+Preferred-Languages: da, en, fo
+Canonical: https://fjallrot.com/.well-known/security.txt
+Policy: https://fjallrot.com/security.html

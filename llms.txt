@@ -1,0 +1,57 @@
+# Fjallrót — Architecture & Standards
+
+Fjallrót is a software company focused on simplicity, privacy, security, and responsible technology.
+
+The name Fjallrót comes from Faroese and represents the idea of strong foundations, stability, and connection to nature.
+
+## Official Resources
+
+- Website: https://fjallrot.com/
+- Standards: https://fjallrot.com/standard.html
+- Privacy Policy: https://fjallrot.com/privacy.html
+- Terms: https://fjallrot.com/terms.html
+- Security Reporting: https://fjallrot.com/security.html
+- Security Contact: security@fjallrot.com
+
+---
+
+# Core Site Structure
+
+## Public Pages
+
+- `/index.html`
+  - Landing page
+  - Company mission
+  - Product overview
+  - Core principles
+
+- `/standard.html`
+  - Interactive Fjallrót Standard viewer
+  - Loads version-controlled Markdown documentation
+
+- `/privacy.html`
+  - Privacy policy
+  - Data minimization principles
+  - No surveillance-based business model
+
+- `/terms.html`
+  - Service terms
+  - Responsible usage requirements
+
+- `/security.html`
+  - Responsible disclosure policy
+  - Security reporting information
+
+- `/legal/disclaimer.html`
+  - Product limitations
+  - Legal disclaimers
+
+- `/404.html`
+  - Custom error fallback page
+
+
+# The Fjallrót Standard
+
+The Fjallrót Standard is the constitutional foundation of the company.
+
+Documentation is stored as version-controlled Markdown files:

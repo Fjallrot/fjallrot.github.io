@@ -1,0 +1,32 @@
+{
+    "name": "Fjallrót Standard & Future",
+    "short_name": "Fjallrót",
+    "description": "Fremtidens standard for Fjallrót - Konstitution, filosofi, sikkerhed og webstandarder.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#0d0f12",
+    "theme_color": "#0d0f12",
+    "orientation": "any",
+    "lang": "da",
+
+    "icons": [{
+            "src": "/assets/images/logo6-1.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/assets/images/logo6-1.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+
+    "categories": [
+        "business",
+        "developer",
+        "security"
+    ]
+}

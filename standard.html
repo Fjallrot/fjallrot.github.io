@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        The Fjallrót Standard — Dokumentation og principper
+    </title>
+
+
+    <meta name="description" content="Det officielle Fjallrót standardbibliotek for principper, sikkerhed, webstandarder, produktudvikling og ansvarlig teknologi.">
+
+
+    <meta name="robots" content="index, follow">
+
+
+    <link rel="canonical" href="https://fjallrot.com/standard.html">
+
+
+    <!-- PWA -->
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <meta name="theme-color" content="#0d0f12">
+
+
+    <!-- Icons -->
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo6-1.svg">
+
+    <link rel="apple-touch-icon" href="assets/images/logo6-1.svg">
+
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <header>
+
+        <div class="container header-container">
+
+
+            <a href="index.html" class="logo-link" aria-label="Gå til Fjallróts forside">
+
+
+                <img src="assets/images/logo6-1.svg" alt="Fjallrót logo" class="logo-img" width="56" height="56">
+
+
+                <span class="logo-text">
+                Fjall<span>rót</span>
+                </span>
+
+
+            </a>
+
+
+
+
+
+            <button class="burger-menu" type="button" aria-label="Åbn menu" aria-controls="main-navigation" aria-expanded="false">
+
+
+            <span class="burger-line" aria-hidden="true"></span>
+
+            <span class="burger-line" aria-hidden="true"></span>
+
+            <span class="burger-line" aria-hidden="true"></span>
+
+
+        </button>
+
+
+
+
+
+            <nav id="main-navigation" aria-label="Hovednavigation">
+
+
+                <ul class="nav-links">
+
+
+                    <li>
+                        <a href="index.html" data-i18n="nav_home">
+                        Hjem
+                    </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="standard.html" class="active" aria-current="page" data-i18n="nav_standards">
+                        Standarder
+                    </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="privacy.html" data-i18n="nav_privacy">
+                        Privatliv
+                    </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="terms.html" data-i18n="nav_terms">
+                        Betingelser
+                    </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="security.html">
+                        Sikkerhed
+                    </a>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+
+
+    <main class="container standard-layout">
+
+
+
+
+
+        <aside class="standard-sidebar" aria-label="Fjallrót Standard kapitler">
+
+
+            <div class="sidebar-title">
+
+                Fjallrót Standard
+
+            </div>
+
+
+
+
+
+            <ul class="sidebar-menu">
+
+
+                <li>
+
+                    <button data-doc="00-constitution" class="active" aria-pressed="true">
+
+                    <span>
+                        00 Constitution
+                    </span>
+
+                    <span class="badge">
+                        DNA
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="01-philosophy" aria-pressed="false">
+
+                    <span>
+                        01 Philosophy
+                    </span>
+
+                    <span class="badge">
+                        ⭐⭐⭐⭐⭐
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="02-brand" aria-pressed="false">
+
+                    <span>
+                        02 Brand
+                    </span>
+
+                    <span class="badge">
+                        ⭐⭐⭐⭐☆
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="03-security" aria-pressed="false">
+
+                    <span>
+                        03 Security
+                    </span>
+
+                    <span class="badge">
+                        ⭐⭐⭐⭐⭐
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="04-web" aria-pressed="false">
+
+                    <span>
+                        04 Web
+                    </span>
+
+                    <span class="badge">
+                        ⭐⭐⭐⭐☆
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="05-git" aria-pressed="false">
+
+                    <span>
+                        05 Git
+                    </span>
+
+                    <span class="badge">
+                        ⭐⭐⭐⭐⭐
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="06-infrastructure" aria-pressed="false">
+
+                    <span>
+                        06 Infrastructure
+                    </span>
+
+                    <span class="badge">
+                        ⭐⭐⭐☆☆
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="07-release" aria-pressed="false">
+
+                    <span>
+                        07 Release
+                    </span>
+
+                    <span class="badge">
+                        ⭐⭐⭐⭐☆
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="08-products" aria-pressed="false">
+
+                    <span>
+                        08 Products
+                    </span>
+
+                    <span class="badge">
+                        Vision
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+
+                <li>
+
+                    <button data-doc="09-ethics" aria-pressed="false">
+
+                    <span>
+                        09 Responsible Technology
+                    </span>
+
+                    <span class="badge">
+                        Ansvar
+                    </span>
+
+                </button>
+
+                </li>
+
+
+
+
+            </ul>
+
+
+
+        </aside>
+
+
+
+
+
+
+
+
+
+        <section class="standard-content">
+
+
+            <div class="markdown-body">
+
+
+                <div class="spinner-container">
+
+
+                    <div class="spinner"></div>
+
+
+                    <p class="loading-text">
+
+                        Forbereder visning...
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer>
+
+
+        <div class="container footer-container">
+
+
+
+            <div class="footer-brand">
+
+
+                <a href="index.html" class="logo-link footer-logo-link">
+
+
+                    <img src="assets/images/logo6-1.svg" alt="Fjallrót logo" class="logo-img footer-logo-img" width="42" height="42">
+
+
+                    <span>
+                    Fjall<span>rót</span>
+                    </span>
+
+
+                </a>
+
+
+
+
+
+                <p class="tagline" data-i18n="footer_tagline">
+
+                    Bygget på principper om tillid, privatliv og kvalitet.
+
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <ul class="footer-links">
+
+
+                <li>
+                    <a href="standard.html">
+                    Standarder
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="privacy.html">
+                    Privatliv
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="terms.html">
+                    Betingelser
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="security.html">
+                    Sikkerhed
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="legal/disclaimer.html">
+                    Ansvarsbegrænsning
+                </a>
+                </li>
+
+
+                <li>
+                    <a href="llms.txt">
+                    AI-indeks
+                </a>
+                </li>
+
+
+            </ul>
+
+
+
+
+
+
+
+            <div class="footer-copy" data-i18n="footer_copy">
+
+                © 2026 Fjallrót. Alle rettigheder forbeholdes.
+
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+
+
+
+
+
+
+    <script src="assets/js/translations.js" defer></script>
+
+    <script src="assets/js/main.js" defer></script>
+
+    <script src="assets/js/standard.js" defer></script>
+
+
+
+</body>
+
+</html>
