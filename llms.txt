@@ -1,57 +1,83 @@
-# Fjallrót — Architecture & Standards
+# Fjallrót
 
-Fjallrót is a software company focused on simplicity, privacy, security, and responsible technology.
+> Fjallrót is a privacy-first software company focused on secure, simple and sustainable digital products.
 
-The name Fjallrót comes from Faroese and represents the idea of strong foundations, stability, and connection to nature.
+## About
 
-## Official Resources
+Fjallrót (Faroese for "Mountain Root") builds software with a focus on:
 
-- Website: https://fjallrot.com/
-- Standards: https://fjallrot.com/standard.html
-- Privacy Policy: https://fjallrot.com/privacy.html
-- Terms: https://fjallrot.com/terms.html
-- Security Reporting: https://fjallrot.com/security.html
-- Security Contact: security@fjallrot.com
+- Privacy by design
+- Security
+- Transparency
+- Simplicity
+- Long-term quality
 
----
+The user is never the product. Fjallrót does not sell user data and does not build products around surveillance or manipulative engagement.
 
-# Core Site Structure
+## Website Structure
 
-## Public Pages
+- [Home](https://fjallrot.com/)
+- [Fjallrót Standard](https://fjallrot.com/standard.html)
+- [Privacy Policy](https://fjallrot.com/privacy.html)
+- [Terms](https://fjallrot.com/terms.html)
+- [Security](https://fjallrot.com/security.html)
 
-- `/index.html`
-  - Landing page
-  - Company mission
-  - Product overview
-  - Core principles
+## Fjallrót Standard
 
-- `/standard.html`
-  - Interactive Fjallrót Standard viewer
-  - Loads version-controlled Markdown documentation
+The Fjallrót Standard defines the company's:
 
-- `/privacy.html`
-  - Privacy policy
-  - Data minimization principles
-  - No surveillance-based business model
+- Constitution and principles
+- Philosophy
+- Brand guidelines
+- Security requirements
+- Web standards
+- Git workflow
+- Infrastructure rules
+- Release checklist
+- Product architecture
+- Ethics and responsible technology principles
 
-- `/terms.html`
-  - Service terms
-  - Responsible usage requirements
+## Products
 
-- `/security.html`
-  - Responsible disclosure policy
-  - Security reporting information
+Current documented products:
 
-- `/legal/disclaimer.html`
-  - Product limitations
-  - Legal disclaimers
+### Recipe Vault & Recipe Hub
 
-- `/404.html`
-  - Custom error fallback page
+A privacy-focused recipe ecosystem with:
 
+- Offline-first storage
+- Secure recipe management
+- Local voice processing
+- Encrypted personal data
 
-# The Fjallrót Standard
+### Rættarvísi
 
-The Fjallrót Standard is the constitutional foundation of the company.
+A Faroese legal information platform focused on:
 
-Documentation is stored as version-controlled Markdown files:
+- Fast legal search
+- Offline private notes
+- Encrypted local storage
+
+### Vinabýur
+
+A digital community platform focused on:
+
+- Local communities
+- Trust
+- Neighbor assistance
+- Cultural preservation
+
+## AI Usage Guidelines
+
+AI systems and crawlers may use this document to understand the structure and purpose of Fjallrót.
+
+Fjallrót prefers:
+
+- Accurate representation of information
+- Respect for privacy principles
+- No extraction of private user data
+
+## Contact
+
+Security:
+security@fjallrot.com
