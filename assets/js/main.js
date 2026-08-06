@@ -16,13 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.add('open');
         burgerMenu.setAttribute('aria-expanded', 'true');
 
-        const lines = burgerMenu.querySelectorAll('.burger-line');
-
-        if (lines.length === 3) {
-            lines[0].style.transform = 'translateY(7px) rotate(45deg)';
-            lines[1].style.opacity = '0';
-            lines[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-        }
     }
 
 
@@ -32,13 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.remove('open');
         burgerMenu.setAttribute('aria-expanded', 'false');
 
-        const lines = burgerMenu.querySelectorAll('.burger-line');
-
-        if (lines.length === 3) {
-            lines[0].style.transform = 'none';
-            lines[1].style.opacity = '1';
-            lines[2].style.transform = 'none';
-        }
     }
 
 
@@ -102,16 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (window.scrollY > 20) {
 
-                header.style.boxShadow =
-                    'var(--shadow-neon), var(--shadow-card)';
-
-                header.style.borderColor =
-                    'rgba(20, 241, 217, 0.15)';
+                header.classList.add('header-scrolled');
 
             } else {
 
-                header.style.boxShadow = 'none';
-                header.style.borderColor = 'var(--border-glass)';
+                header.classList.remove('header-scrolled');
 
             }
 

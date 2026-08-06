@@ -251,18 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
         );
 
 
-        const lines =
-            burger.querySelectorAll('.burger-line');
-
-
-        if (lines.length === 3) {
-
-            lines[0].style.transform = 'none';
-            lines[1].style.opacity = '1';
-            lines[2].style.transform = 'none';
-
-        }
-
     }
 
 

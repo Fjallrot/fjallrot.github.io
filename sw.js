@@ -1,9 +1,6 @@
-const CACHE_NAME = 'fjallrot-v29';
-
+const CACHE_NAME = 'fjallrot-v30';
 
 const ASSETS_TO_CACHE = [
-
-    // Core pages
     '/',
     '/index.html',
     '/standard.html',
@@ -12,31 +9,13 @@ const ASSETS_TO_CACHE = [
     '/security.html',
     '/legal/disclaimer.html',
     '/404.html',
-
-
-    // PWA
     '/manifest.webmanifest',
-
-
-    // Security
     '/.well-known/security.txt',
-
-
-    // Styles
     '/assets/css/style.css',
-
-
-    // Scripts
     '/assets/js/main.js',
     '/assets/js/standard.js',
     '/assets/js/translations.js',
-
-
-    // Images
-    '/assets/images/logo6-1.png',
-
-
-    // Danish standard docs
+    '/assets/images/logo6-1.svg',
     '/standard/00-constitution.md',
     '/standard/01-philosophy.md',
     '/standard/02-brand.md',
@@ -47,337 +26,88 @@ const ASSETS_TO_CACHE = [
     '/standard/07-release.md',
     '/standard/08-products.md',
     '/standard/09-ethics.md',
-
-
-    // Faroese docs
     '/standard/fo/00-constitution.md',
     '/standard/fo/08-products.md',
-
-
-    // English docs
     '/standard/en/00-constitution.md',
     '/standard/en/08-products.md'
-
 ];
 
-
-
-
-
-/*
- INSTALL
-*/
-
-self.addEventListener(
-    'install',
-    event => {
-
-        event.waitUntil(
-
-            caches.open(CACHE_NAME)
-
-            .then(cache => {
-
-                console.log(
-                    '[Fjallrót SW] Installing cache'
-                );
-
-                return cache.addAll(
-                    ASSETS_TO_CACHE
-                );
-
-            })
-
-            .then(() => {
-
-                return self.skipWaiting();
-
-            })
-
-        );
-
-    }
-
+const CACHEABLE_PATHS = new Set(ASSETS_TO_CACHE);
+const NAVIGATION_PATHS = new Set(
+    ASSETS_TO_CACHE.filter(path => path === '/' || path.endsWith('.html'))
 );
 
+self.addEventListener('install', event => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => cache.addAll(ASSETS_TO_CACHE))
+            .then(() => self.skipWaiting())
+    );
+});
 
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys()
+            .then(names => Promise.all(
+                names
+                    .filter(name => name !== CACHE_NAME)
+                    .map(name => caches.delete(name))
+            ))
+            .then(() => self.clients.claim())
+    );
+});
 
+self.addEventListener('fetch', event => {
+    if (event.request.method !== 'GET') return;
 
+    const url = new URL(event.request.url);
 
-
-/*
- ACTIVATE
-*/
-
-self.addEventListener(
-    'activate',
-    event => {
-
-
-        event.waitUntil(
-
-            caches.keys()
-
-            .then(cacheNames => {
-
-
-                return Promise.all(
-
-                    cacheNames.map(cache => {
-
-
-                        if (
-                            cache !== CACHE_NAME
-                        ) {
-
-
-                            console.log(
-                                '[Fjallrót SW] Removing old cache:',
-                                cache
-                            );
-
-
-                            return caches.delete(
-                                cache
-                            );
-
-
-                        }
-
-
-                    })
-
-                );
-
-
-            })
-
-
-            .then(() => {
-
-                return self.clients.claim();
-
-            })
-
-        );
-
-
+    // Never intercept third-party traffic or unexpected same-origin endpoints.
+    if (url.origin !== self.location.origin || !CACHEABLE_PATHS.has(url.pathname)) {
+        return;
     }
 
-);
-
-
-
-
-
-
-
-/*
- FETCH
-*/
-
-
-self.addEventListener(
-    'fetch',
-    event => {
-
-
-        if (
-            event.request.method !== 'GET'
-        ) {
-
-            return;
-
-        }
-
-
-
-        const requestURL =
-            new URL(
-                event.request.url
-            );
-
-
-
-
-        /*
-           HTML
-           Network First
-        */
-
-
-        if (
-            event.request.headers
-            .get('accept')
-            ?.includes('text/html')
-        ) {
-
-
-            event.respondWith(
-
-
-                fetch(event.request)
-
-                .then(response => {
-
-
-                    const clone =
-                        response.clone();
-
-
-                    caches.open(
-                            CACHE_NAME
-                        )
-                        .then(cache => {
-
-                            cache.put(
-                                event.request,
-                                clone
-                            );
-
-                        });
-
-
-                    return response;
-
-
-                })
-
-
-                .catch(() => {
-
-
-                    return caches.match(
-                        event.request
-                    )
-
-                    .then(cached => {
-
-
-                        return cached || caches.match('/404.html');
-
-
-                    });
-
-
-                })
-
-
-            );
-
-
-            return;
-
-        }
-
-
-
-
-
-
-
-        /* Markdown: network first, so edits appear immediately. */
-        if (requestURL.pathname.endsWith('.md')) {
-            event.respondWith(
-                fetch(event.request)
-                    .then(response => {
-                        if (response.ok) {
-                            const clone = response.clone();
-                            caches.open(CACHE_NAME)
-                                .then(cache => cache.put(event.request, clone));
-                        }
-                        return response;
-                    })
-                    .catch(() => caches.match(event.request))
-            );
-            return;
-        }
-
-        /* Static files: cache first. */
-
-
-        event.respondWith(
-
-
-            caches.match(
-                event.request
-            )
-
-            .then(cachedResponse => {
-
-
-                if (
-                    cachedResponse
-                ) {
-
-
-                    return cachedResponse;
-
-
-                }
-
-
-
-                return fetch(
-                    event.request
-                )
-
-
-                .then(networkResponse => {
-
-
-                    if (
-
-                        !networkResponse ||
-
-                        networkResponse.status !== 200 ||
-
-                        networkResponse.type !== 'basic'
-
-                    ) {
-
-
-                        return networkResponse;
-
-
-                    }
-
-
-
-                    const responseClone =
-                        networkResponse.clone();
-
-
-
-                    caches.open(
-                        CACHE_NAME
-                    )
-
-                    .then(cache => {
-
-
-                        cache.put(
-                            event.request,
-                            responseClone
-                        );
-
-
-                    });
-
-
-
-                    return networkResponse;
-
-
-                });
-
-
-            })
-
-
-        );
-
-
+    if (NAVIGATION_PATHS.has(url.pathname)) {
+        event.respondWith(networkFirst(event.request, url.pathname, '/404.html'));
+        return;
     }
 
-);
+    if (url.pathname.endsWith('.md')) {
+        event.respondWith(networkFirst(event.request, url.pathname));
+        return;
+    }
+
+    event.respondWith(cacheFirst(event.request, url.pathname));
+});
+
+async function networkFirst(request, cacheKey, fallbackKey) {
+    try {
+        const response = await fetch(request);
+
+        if (response.ok && response.type === 'basic') {
+            const cache = await caches.open(CACHE_NAME);
+            await cache.put(cacheKey, response.clone());
+        }
+
+        return response;
+    } catch {
+        const cached = await caches.match(cacheKey);
+        if (cached) return cached;
+        if (fallbackKey) return caches.match(fallbackKey);
+        return Response.error();
+    }
+}
+
+async function cacheFirst(request, cacheKey) {
+    const cached = await caches.match(cacheKey);
+    if (cached) return cached;
+
+    const response = await fetch(request);
+
+    if (response.ok && response.type === 'basic') {
+        const cache = await caches.open(CACHE_NAME);
+        await cache.put(cacheKey, response.clone());
+    }
+
+    return response;
+}
