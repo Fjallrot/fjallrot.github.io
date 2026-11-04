@@ -197,7 +197,7 @@ function setLanguage(lang) {
         if (childSpan) {
           childSpan.textContent = text;
         } else {
-          el.innerHTML = '';
+          el.replaceChildren();
           el.appendChild(svg);
           el.appendChild(document.createTextNode(' ' + text));
         }
@@ -285,7 +285,7 @@ function openRecipeDetail(recipeId) {
   meta.textContent = recipe.meta[currentLang];
   
   // Setup ingredients
-  ingredientsList.innerHTML = '';
+  ingredientsList.replaceChildren();
   recipe.ingredients[currentLang].forEach(ing => {
     const li = document.createElement('li');
     li.textContent = ing;

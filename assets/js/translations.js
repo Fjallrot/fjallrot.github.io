@@ -56,6 +56,9 @@ const translations = {
 
 
         card_read_more: "Læs mere",
+        card_recipe_more: "Læs mere om Recipe Vault",
+        card_law_more: "Læs mere om Rættarvísi",
+        card_neighborhood_more: "Læs mere om Vinabýur",
 
 
         // Footer
@@ -133,6 +136,9 @@ const translations = {
 
 
         card_read_more: "Read more",
+        card_recipe_more: "Read more about Recipe Vault",
+        card_law_more: "Read more about Rættarvísi",
+        card_neighborhood_more: "Read more about Vinabýur",
 
 
         // Footer
@@ -218,6 +224,9 @@ const translations = {
 
 
         card_read_more: "Les meira",
+        card_recipe_more: "Les meira um Recipe Vault",
+        card_law_more: "Les meira um Rættarvísi",
+        card_neighborhood_more: "Les meira um Vinabýur",
 
 
         // Footer
